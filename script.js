@@ -75,7 +75,7 @@ var blocks = setInterval(function () {
         parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     var drop = 0;
     if (characterTop <= 0) {
-        alert("game over ahlam. score:" + (counter - 9));
+        alert("game over ! . score:" + (counter - 9));
         clearInterval(blocks);
         location.reload();
     }

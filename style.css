@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: darkred;
+}
 
 #game {
     width: 400px;
