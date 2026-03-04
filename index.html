@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ball-Game</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bing Bang Arcade</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+    <div class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo"></div>
+                <div>
+                    <h1>Bing Bang Arcade</h1>
+                    <p class="subtitle">Choisis un jeu, bats ton record.</p>
+                </div>
+            </div>
 
+            <div class="hud">
+                <div class="pill">Jeu: <span id="gameName">Menu</span></div>
+                <div class="pill">Score: <span id="score">0</span></div>
+                <div class="pill">Best: <span id="best">0</span></div>
+                <button id="btnPause" class="btn ghost" type="button">Pause</button>
+            </div>
+        </header>
 
-    <h1>Bing Bang Game</h1>
-    <div id="game">
-        <div id="character"></div>
+        <main class="stage">
+            <div id="game" aria-label="Zone de jeu">
+                <div id="character" aria-label="Balle"></div>
+
+                <div id="overlay" class="overlay show">
+                    <div class="card">
+                        <h2 id="overlayTitle">Bing Bang Arcade</h2>
+                        <p id="overlayText">Choisis un jeu</p>
+
+                        <div class="grid">
+                            <button id="pickHole" class="btn" type="button">Hole Escape</button>
+                            <button id="pickFlappy" class="btn" type="button">Flappy Ball</button>
+                            <button id="pickSnake" class="btn" type="button">Snake</button>
+                        </div>
+
+                        <div class="row" style="margin-top:10px">
+                            <button id="btnStart" class="btn ghost" type="button">Jouer</button>
+                            <button id="btnRestart" class="btn ghost" type="button">Recommencer</button>
+                            <button id="btnMenu" class="btn ghost" type="button">Menu</button>
+                        </div>
+
+                        <p class="hint" id="controlsHint"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips">
+                <div class="tip"><b>Hole Escape</b><br />← → déplacer</div>
+                <div class="tip"><b>Flappy Ball</b><br />Espace / clic = jump</div>
+                <div class="tip">⏸️ Pause ou touche <b>P</b></div>
+            </div>
+        </main>
     </div>
-  <script src="./script.js"></script>
+
+    <script src="./script.js" defer></script>
 </body>
+
 </html>
